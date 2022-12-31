@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens Page</title>
+    <h2>Mens Page</h2>
+    <style>
+        #parent{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        #parent > div{
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        img{
+            width: 100%;
+        }
+        h2+div{
+            display: flex;
+            justify-content:space-evenly;
+        }
+        p:nth-child(2){
+            text-decoration: line-through;
+        }
+        p:nth-child(3){
+            color: red;
+        }
+        .cart{
+            width: 50%;
+            margin: auto;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: teal;
+            color: white;
+            display: block;
+        }
+        .cart:hover{
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent"></div>
+</body>
+<script src="mens.js"></script>
+</html>
