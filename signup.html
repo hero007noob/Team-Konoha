@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: linear-gradient(to right, rgb(255, 122, 144) ,white);
+      }
+      form {
+        width: 35rem;
+        margin: auto;
+        color: white;
+        background-color: #0b0f0d94;
+        border-radius: 12px;
+        border: 1px solid #ffffff20 ;
+        
+      }
+      input[type=text],input[type=email]{
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 5px;
+        padding: 15px 18px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #030804;
+        color: white;
+        padding: 14px 20px;
+        border-radius: 5px;
+        margin: 7px 0;
+        width: 100%;
+        font-size: 18px;
+      }
+      button:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+      .headingcontainer
+      {
+        text-align: center;
+      }
+      .maincontainer
+      {
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="headingcontainer">
+        <h3>-Visitor-</h3>
+      </div>
+      <div class="maincontainer">
+        <label for="name">Full Name</label>
+        <input type="text" placeholder="Full Name" name="name" required />
+        <br /><br />
+        <label for="email`">Email</label>
+        <input type="email" placeholder="Enter Email" name="email" required />
+        <br /><br />
+        <label for="organisation`">Organisation</label>
+        <input
+          type="text"
+          placeholder="Organisation"
+          name="organisation"
+          required
+        />
+        <br />
+        <button type="submit">Signup</button>
+        <button type="submit">Return</button>
+      </div>
+    </form>
+  </body>
+</html>
