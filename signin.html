@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in Page</title>
+    <style>
+      body{
+        background-color: aquamarine;
+      }
+      a{
+        background: rgb(18, 8, 8);
+        color: rgba(226, 232, 229, 0.733);
+        font-weight:900;
+        text-decoration: none;
+        padding: 10px;
+        margin: auto;
+      }
+      a:hover{
+        color: rgb(125, 251, 90);
+        background-color: grey;
+      }
+      .nav{
+        margin: auto;
+        background-color: grey;
+        height: 30px;
+        padding-top: 10px;
+      }
+      h1{
+        text-align: center;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 20%;
+        background-color: bisque;
+      }
+      input{
+        margin: 16px;
+        padding: 10px;
+      }
+      input:last-child{
+        background: red;
+        border-radius: 5px;
+        border-style: none;
+        color: white;
+        font-weight: 900;
+      }
+      input:last-child:hover{
+        background: rgba(155, 229, 164, 0.973);
+        color: rgb(5, 7, 101);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="signin">
+      <h1 id="heading">Please Enter Your Details</h1>
+      <form>
+        <input type="email" id="email" placeholder="Enter Your Email"/>
+        <input type="password" id="password" placeholder="Enter Password"/>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+  <script>
+    document.querySelector("form").addEventListener("submit", login);
+
+    function login(){
+      event.preventDefault();
+      var lemail=document.getElementById("email").value;
+      var lpass=document.getElementById("password").value;
+      var heading=document.getElementById("heading");
+
+      var store=JSON.parse(localStorage.getItem("account-data"));
+      // console.log(store[0].email);
+      for(let i=0; i<store.length; i++)
+      if(lemail==store[i].email && lpass==store[i].password){
+        heading.innerHTML="Sign in Successful";
+        heading.style.color="green";
+        break;
+      }else{
+        heading.innerHTML="Wrong Credentials";
+        heading.style.color="red";
+      }
+    }
+  </script>
+</html>
